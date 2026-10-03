@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Dashboard creation workflow</title>
+  <desc id="desc">Create a custom query, add widgets and filters, arrange the live dashboard, validate the definition, then share it with authorized users.</desc>
+  <rect width="1200" height="360" rx="28" fill="#17243d"/>
+  <text x="60" y="65" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="700" fill="#fff">From business question to shared dashboard</text>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <g transform="translate(60 115)"><rect width="190" height="160" rx="20" fill="#fff"/><text x="24" y="44" font-size="15" font-weight="800" fill="#6252a3">01 CUSTOM QUERY</text><text x="24" y="86" font-size="21" font-weight="700" fill="#17243d">Choose fields</text><text x="24" y="116" font-size="15" fill="#526078">Add calculations and</text><text x="24" y="139" font-size="15" fill="#526078">typed conditions</text></g>
+    <g transform="translate(280 115)"><rect width="190" height="160" rx="20" fill="#fff"/><text x="24" y="44" font-size="15" font-weight="800" fill="#167b77">02 WIDGETS</text><text x="24" y="86" font-size="21" font-weight="700" fill="#17243d">Visualize</text><text x="24" y="116" font-size="15" fill="#526078">Use KPI, charts, pivot</text><text x="24" y="139" font-size="15" fill="#526078">or record lists</text></g>
+    <g transform="translate(500 115)"><rect width="190" height="160" rx="20" fill="#fff"/><text x="24" y="44" font-size="15" font-weight="800" fill="#6252a3">03 ARRANGE</text><text x="24" y="86" font-size="21" font-weight="700" fill="#17243d">Move and resize</text><text x="24" y="116" font-size="15" fill="#526078">Edit cards in the live</text><text x="24" y="139" font-size="15" fill="#526078">dashboard canvas</text></g>
+    <g transform="translate(720 115)"><rect width="190" height="160" rx="20" fill="#fff"/><text x="24" y="44" font-size="15" font-weight="800" fill="#167b77">04 VALIDATE</text><text x="24" y="86" font-size="21" font-weight="700" fill="#17243d">Check together</text><text x="24" y="116" font-size="15" fill="#526078">Datasets, filters and</text><text x="24" y="139" font-size="15" fill="#526078">layout must pass</text></g>
+    <g transform="translate(940 115)"><rect width="200" height="160" rx="20" fill="#6252a3"/><text x="24" y="44" font-size="15" font-weight="800" fill="#dcd6fa">05 SHARE</text><text x="24" y="86" font-size="21" font-weight="700" fill="#fff">Open securely</text><text x="24" y="116" font-size="15" fill="#ece9fa">Authorized users see it</text><text x="24" y="139" font-size="15" fill="#ece9fa">in their dashboard list</text></g>
+  </g>
+</svg>

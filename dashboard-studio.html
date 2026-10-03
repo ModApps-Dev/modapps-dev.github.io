@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ModApps Dashboard Studio for Odoo 19</title>
+  <meta name="description" content="Create permission-aware Odoo dashboards with guided custom queries, twelve widget types, live layout editing, drill-through and fresh exports.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://modapps.dev/dashboard-studio.html">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#17243d">
+  <meta property="og:title" content="ModApps Dashboard Studio for Odoo 19">
+  <meta property="og:description" content="No-code operational dashboards that preserve each viewer's Odoo permissions.">
+  <meta property="og:type" content="product">
+  <meta property="og:url" content="https://modapps.dev/dashboard-studio.html">
+  <meta property="og:image" content="https://modapps.dev/assets/dashboard-studio/cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ModApps Dashboard Studio for Odoo 19">
+  <meta name="twitter:description" content="Build permission-aware dashboards with guided custom queries, live layouts and fresh exports.">
+  <meta name="twitter:image" content="https://modapps.dev/assets/dashboard-studio/cover.png">
+  <style>
+    :root { --ink:#17243d; --soft:#526078; --paper:#f7f8fb; --white:#fff; --line:#dfe4ec; --brand:#6252a3; --brand-dark:#43367a; --accent:#23a6a1; --accent-soft:#e6f7f5; --shadow:0 24px 70px rgba(23,36,61,.12); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.6; }
+    a { color:inherit; }
+    img { display:block; max-width:100%; }
+    .shell { width:min(1160px,calc(100% - 40px)); margin:0 auto; }
+    header { position:sticky; top:0; z-index:10; border-bottom:1px solid rgba(223,228,236,.86); background:rgba(247,248,251,.94); backdrop-filter:blur(16px); }
+    nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { display:inline-flex; align-items:center; gap:12px; text-decoration:none; font-weight:850; }
+    .brand img { width:38px; height:38px; border-radius:10px; }
+    .nav-links { display:flex; align-items:center; gap:22px; }
+    .nav-links a { color:var(--soft); text-decoration:none; font-weight:700; font-size:.94rem; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 22px; border:1px solid transparent; border-radius:14px; text-decoration:none; font-weight:800; }
+    .button-primary { color:#fff; background:var(--brand); box-shadow:0 14px 28px rgba(98,82,163,.24); }
+    .nav-links .button-primary { color:#fff; }
+    .button-primary:hover { background:var(--brand-dark); }
+    .button-secondary { background:#fff; border-color:var(--line); }
+    .hero { padding:76px 0 64px; }
+    .hero-grid { display:grid; grid-template-columns:1fr .92fr; align-items:center; gap:56px; }
+    .eyebrow { color:var(--brand); font-size:.82rem; font-weight:900; letter-spacing:.13em; text-transform:uppercase; }
+    h1 { margin:15px 0 20px; font-size:clamp(2.8rem,5vw,5rem); line-height:1; letter-spacing:-.055em; }
+    h2 { margin:10px 0 15px; font-size:clamp(2rem,4vw,3.1rem); line-height:1.08; letter-spacing:-.04em; }
+    h3 { margin:0 0 8px; font-size:1.15rem; }
+    .lead { color:var(--soft); font-size:1.14rem; max-width:720px; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+    .price { margin-top:28px; font-size:2.4rem; font-weight:900; letter-spacing:-.04em; }
+    .price small { color:var(--soft); font-size:.9rem; font-weight:650; letter-spacing:0; }
+    .cover { overflow:hidden; border:1px solid var(--line); border-radius:28px; background:#fff; box-shadow:var(--shadow); }
+    .cover img { width:100%; aspect-ratio:16/10; object-fit:cover; }
+    .cover figcaption { padding:14px 18px; color:var(--soft); font-size:.86rem; }
+    section { padding:72px 0; }
+    .white { background:#fff; }
+    .section-head { max-width:780px; margin-bottom:34px; }
+    .section-head p { color:var(--soft); margin:0; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .card { padding:26px; border:1px solid var(--line); border-radius:20px; background:#fff; }
+    .card p { margin:0; color:var(--soft); }
+    .pill { display:inline-flex; padding:6px 10px; margin-bottom:14px; border-radius:999px; color:#167b77; background:var(--accent-soft); font-size:.77rem; font-weight:850; letter-spacing:.05em; text-transform:uppercase; }
+    .visual { overflow:hidden; border:1px solid var(--line); border-radius:26px; background:#fff; box-shadow:0 18px 46px rgba(23,36,61,.08); }
+    .visual img { width:100%; }
+    .grid figure { margin:0; }
+    .visual figcaption { padding:12px 15px; color:var(--soft); font-size:.85rem; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:42px; align-items:start; }
+    .feature-list { display:grid; gap:12px; margin:0; padding:0; list-style:none; }
+    .feature-list li { position:relative; padding:13px 15px 13px 44px; border:1px solid var(--line); border-radius:14px; background:#fff; font-weight:650; }
+    .feature-list li::before { content:"✓"; position:absolute; left:15px; color:var(--accent); font-weight:950; }
+    table { width:100%; border-collapse:separate; border-spacing:0; overflow:hidden; border:1px solid var(--line); border-radius:18px; background:#fff; }
+    th,td { padding:14px 16px; text-align:left; border-bottom:1px solid var(--line); }
+    th { color:#fff; background:var(--ink); }
+    tr:last-child td { border-bottom:0; }
+    .download { padding:46px; border-radius:28px; color:#fff; background:linear-gradient(130deg,var(--brand-dark),var(--brand),#3b8d9e); }
+    .download p { color:#e8e5f7; }
+    .download .button { color:var(--brand-dark); background:#fff; }
+    footer { padding:36px 0 48px; color:var(--soft); }
+    .footer { display:flex; justify-content:space-between; gap:24px; border-top:1px solid var(--line); padding-top:28px; }
+    @media (max-width:860px) { .hero-grid,.split,.grid { grid-template-columns:1fr; } .nav-links a:not(.button) { display:none; } }
+    @media (max-width:560px) { .shell { width:min(100% - 24px,1160px); } h1 { font-size:3rem; } section { padding:54px 0; } .download { padding:28px; } .footer { flex-direction:column; } }
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ModApps Dashboard Studio","applicationCategory":"BusinessApplication","operatingSystem":"Odoo 19","url":"https://modapps.dev/dashboard-studio.html","downloadUrl":"https://apps.odoo.com/apps/modules/19.0/modapps_insight_studio","offers":{"@type":"Offer","price":"79","priceCurrency":"USD","url":"https://apps.odoo.com/apps/modules/19.0/modapps_insight_studio"},"publisher":{"@type":"Organization","name":"ModApps","url":"https://modapps.dev/"}}</script>
+</head>
+<body>
+  <header>
+    <nav class="shell">
+      <a class="brand" href="index.html"><img src="assets/dashboard-studio/icon.png" alt="ModApps"><span>ModApps</span></a>
+      <div class="nav-links">
+        <a href="#features">Features</a><a href="#security">Security</a><a href="docs/dashboard-studio.html">Documentation</a>
+        <a class="button button-primary" href="https://apps.odoo.com/apps/modules/19.0/modapps_insight_studio">View on Odoo Apps</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <div class="eyebrow">Odoo 19 Community and Enterprise</div>
+          <h1>Dashboards your team can build and trust.</h1>
+          <p class="lead">ModApps Dashboard Studio turns saved Odoo data into permission-aware operational dashboards. Designers choose validated fields and calculations; viewers see only records their existing Odoo access allows.</p>
+          <div class="actions"><a class="button button-primary" href="https://apps.odoo.com/apps/modules/19.0/modapps_insight_studio">Get it on Odoo Apps</a><a class="button button-secondary" href="docs/dashboard-studio.html">Read the documentation</a></div>
+          <div class="price">$79 <small>introductory one-time OPL-1 price</small></div>
+        </div>
+        <figure class="cover"><img src="assets/dashboard-studio/cover.png" alt="ModApps Dashboard Studio marketplace artwork"><figcaption>Operational dashboards, guided queries and controlled sharing in one Odoo application.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="white" id="features">
+      <div class="shell">
+        <div class="section-head"><div class="eyebrow">Core capabilities</div><h2>Useful for viewers. Flexible for designers.</h2><p>Start from a compatible template or build a structured custom query without writing SQL, Python or JavaScript.</p></div>
+        <div class="grid">
+          <article class="card"><span class="pill">Build</span><h3>Guided custom queries</h3><p>Select stored fields one by one, add compatible calculations and typed conditions, then validate a fresh bounded sample.</p></article>
+          <article class="card"><span class="pill">Visualize</span><h3>Twelve widget types</h3><p>KPI, gauge, bar, stacked bar, line, area, pie, donut, funnel, pivot and record-list presentations.</p></article>
+          <article class="card"><span class="pill">Arrange</span><h3>Live layout editing</h3><p>Move and resize cards directly on the dashboard, edit a widget in context and keep a deterministic mobile order.</p></article>
+          <article class="card"><span class="pill">Understand</span><h3>Lineage and drill-through</h3><p>Explain a number, inspect its filters and permitted-record count, then open only the source records the viewer may read.</p></article>
+          <article class="card"><span class="pill">Deliver</span><h3>Fresh exports</h3><p>Export dashboard workbooks, table data and print-optimized PDF output using fresh viewer-context queries.</p></article>
+          <article class="card"><span class="pill">Share</span><h3>Role-aware access</h3><p>Share validated dashboards with selected users or groups without granting any new access to underlying Odoo records.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell"><div class="visual"><img src="assets/dashboard-studio/build-workflow.svg" alt="Five-step dashboard creation workflow"></div></div>
+    </section>
+
+    <section class="white">
+      <div class="shell">
+        <div class="section-head"><div class="eyebrow">Inside the product</div><h2>Built for daily use, not presentation slides.</h2><p>These screens show Dashboard Studio running with real Odoo records, filters, charts and record lists.</p></div>
+        <div class="grid">
+          <figure class="visual"><img src="assets/dashboard-studio/dashboard-library.png" alt="Dashboard library and sales overview"><figcaption>Dashboard library and sales overview</figcaption></figure>
+          <figure class="visual"><img src="assets/dashboard-studio/sales-revenue-pulse.png" alt="Sales revenue KPI and trend dashboard"><figcaption>Revenue KPIs and trend analysis</figcaption></figure>
+          <figure class="visual"><img src="assets/dashboard-studio/widget-gallery.png" alt="Donut chart and record list widgets"><figcaption>Charts and detailed record lists</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="white" id="security">
+      <div class="shell split">
+        <div><div class="eyebrow">Permission first</div><h2>The dashboard does not become a security shortcut.</h2><p class="lead">Business data is queried under the current viewer's Odoo environment. ACLs, record rules, field groups, allowed companies, language and timezone remain in force for results, drill-through, previews and exports.</p></div>
+        <ul class="feature-list">
+          <li>No arbitrary SQL, Python, safe_eval, JavaScript or browser-supplied domains</li>
+          <li>Saved definitions are validated on the server before sharing</li>
+          <li>Cache entries are isolated by user and access context</li>
+          <li>Exports rerun fresh queries instead of trusting rendered data</li>
+          <li>Viewer, Designer and Manager roles are separated</li>
+        </ul>
+      </div>
+      <div class="shell" style="margin-top:38px"><div class="visual"><img src="assets/dashboard-studio/permission-flow.svg" alt="Permission-aware dashboard data flow"></div></div>
+    </section>
+
+    <section>
+      <div class="shell">
+        <div class="section-head"><div class="eyebrow">Compatibility and boundaries</div><h2>Clear fit before installation.</h2></div>
+        <table>
+          <thead><tr><th>Area</th><th>Supported</th></tr></thead>
+          <tbody>
+            <tr><td>Odoo</td><td>Version 19 Community and Enterprise</td></tr>
+            <tr><td>Hosting</td><td>Odoo.sh and self-hosted installations that allow custom add-ons</td></tr>
+            <tr><td>Required Odoo apps</td><td>Base and Web only; optional templates appear only for apps already installed</td></tr>
+            <tr><td>Python dependency</td><td><code>xlsxwriter</code> for XLSX exports</td></tr>
+            <tr><td>Not included</td><td>External data warehouses, write-back actions, scheduled email delivery, public portals, AI forecasting or arbitrary code execution</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="white" id="guide">
+      <div class="shell download">
+        <div class="eyebrow" style="color:#a9eee3">Client documentation</div>
+        <h2>Install, configure and build your first dashboard.</h2>
+        <p>Use the online reference for installation, roles, custom queries, widgets, filters, layout editing, validation, sharing, exports and troubleshooting. A printable illustrated guide is also available.</p>
+        <div class="actions"><a class="button" href="docs/dashboard-studio.html">Open documentation</a><a class="button" href="downloads/ModApps-Dashboard-Studio-Client-Guide.pdf">Download PDF guide</a></div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="shell footer"><div><strong>ModApps</strong><br><small>Focused Odoo extensions with explicit safety boundaries.</small></div><div><small><a href="https://apps.odoo.com/apps/modules/19.0/modapps_insight_studio">Odoo Apps</a> · <a href="mailto:info@modapps.dev">Support</a> · <a href="index.html">Home</a></small></div></div></footer>
+</body>
+</html>

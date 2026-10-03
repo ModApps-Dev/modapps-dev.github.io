@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Permission aware dashboard data flow</title>
+  <desc id="desc">Saved dashboard definitions are validated on the server, evaluated with each viewer's Odoo permissions, and returned as bounded results, drill through records, and exports.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17243d"/><stop offset="1" stop-color="#51428b"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#17243d" flood-opacity=".16"/></filter>
+  </defs>
+  <rect width="1200" height="430" rx="28" fill="#f7f8fb"/>
+  <text x="60" y="66" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="700" fill="#17243d">Every viewer keeps their Odoo security boundary</text>
+  <g filter="url(#shadow)">
+    <rect x="60" y="120" width="240" height="210" rx="22" fill="#fff" stroke="#dfe4ec"/>
+    <rect x="340" y="120" width="240" height="210" rx="22" fill="#fff" stroke="#dfe4ec"/>
+    <rect x="620" y="120" width="240" height="210" rx="22" fill="url(#bg)"/>
+    <rect x="900" y="120" width="240" height="210" rx="22" fill="#fff" stroke="#dfe4ec"/>
+  </g>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <circle cx="108" cy="170" r="23" fill="#ece9fa"/><text x="108" y="178" text-anchor="middle" font-size="21" font-weight="800" fill="#6252a3">1</text>
+    <text x="88" y="220" font-size="22" font-weight="700" fill="#17243d">Saved definition</text>
+    <text x="88" y="252" font-size="16" fill="#526078">Models, fields, measures,</text><text x="88" y="276" font-size="16" fill="#526078">filters, widgets and layout</text>
+    <circle cx="388" cy="170" r="23" fill="#e6f7f5"/><text x="388" y="178" text-anchor="middle" font-size="21" font-weight="800" fill="#167b77">2</text>
+    <text x="368" y="220" font-size="22" font-weight="700" fill="#17243d">Server validation</text>
+    <text x="368" y="252" font-size="16" fill="#526078">Typed, bounded ORM query</text><text x="368" y="276" font-size="16" fill="#526078">No SQL or executable code</text>
+    <circle cx="668" cy="170" r="23" fill="#ffffff" fill-opacity=".18"/><text x="668" y="178" text-anchor="middle" font-size="21" font-weight="800" fill="#fff">3</text>
+    <text x="648" y="220" font-size="22" font-weight="700" fill="#fff">Viewer permissions</text>
+    <text x="648" y="252" font-size="16" fill="#dce2ef">ACLs, record rules, fields,</text><text x="648" y="276" font-size="16" fill="#dce2ef">companies and timezone</text>
+    <circle cx="948" cy="170" r="23" fill="#fff4dc"/><text x="948" y="178" text-anchor="middle" font-size="21" font-weight="800" fill="#91630c">4</text>
+    <text x="928" y="220" font-size="22" font-weight="700" fill="#17243d">Safe output</text>
+    <text x="928" y="252" font-size="16" fill="#526078">Dashboard, lineage, drill</text><text x="928" y="276" font-size="16" fill="#526078">through and fresh exports</text>
+    <g fill="#6252a3" font-size="28" font-weight="700"><text x="316" y="232">›</text><text x="596" y="232">›</text><text x="876" y="232">›</text></g>
+  </g>
+</svg>
