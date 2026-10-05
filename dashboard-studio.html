@@ -113,7 +113,7 @@
           <article class="card"><span class="pill">Visualize</span><h3>Twelve widget types</h3><p>KPI, gauge, bar, stacked bar, line, area, pie, donut, funnel, pivot and record-list presentations.</p></article>
           <article class="card"><span class="pill">Arrange</span><h3>Live layout editing</h3><p>Move and resize cards directly on the dashboard, edit a widget in context and keep a deterministic mobile order.</p></article>
           <article class="card"><span class="pill">Understand</span><h3>Lineage and drill-through</h3><p>Explain a number, inspect its filters and permitted-record count, then open only the source records the viewer may read.</p></article>
-          <article class="card"><span class="pill">Deliver</span><h3>Fresh exports</h3><p>Export dashboard workbooks, table data and print-optimized PDF output using fresh viewer-context queries.</p></article>
+          <article class="card"><span class="pill">Deliver</span><h3>Fresh and scheduled reports</h3><p>Export interactively or schedule PDF/XLSX delivery to internal users under an explicit permission-scoped execution identity.</p></article>
           <article class="card"><span class="pill">Share</span><h3>Role-aware access</h3><p>Share validated dashboards with selected users or groups without granting any new access to underlying Odoo records.</p></article>
         </div>
       </div>
@@ -130,6 +130,7 @@
           <figure class="visual"><img src="assets/dashboard-studio/dashboard-library.png" alt="Dashboard library and sales overview"><figcaption>Dashboard library and sales overview</figcaption></figure>
           <figure class="visual"><img src="assets/dashboard-studio/sales-revenue-pulse.png" alt="Sales revenue KPI and trend dashboard"><figcaption>Revenue KPIs and trend analysis</figcaption></figure>
           <figure class="visual"><img src="assets/dashboard-studio/widget-gallery.png" alt="Donut chart and record list widgets"><figcaption>Charts and detailed record lists</figcaption></figure>
+          <figure class="visual"><img src="assets/dashboard-studio/scheduled-deliveries.png" alt="Scheduled dashboard report delivery list"><figcaption>Permission-scoped scheduled PDF and XLSX delivery</figcaption></figure>
         </div>
       </div>
     </section>
@@ -142,6 +143,7 @@
           <li>Saved definitions are validated on the server before sharing</li>
           <li>Cache entries are isolated by user and access context</li>
           <li>Exports rerun fresh queries instead of trusting rendered data</li>
+          <li>Scheduled reports fail closed if the saved execution user loses access</li>
           <li>Viewer, Designer and Manager roles are separated</li>
         </ul>
       </div>
@@ -156,9 +158,9 @@
           <tbody>
             <tr><td>Odoo</td><td>Version 19 Community and Enterprise</td></tr>
             <tr><td>Hosting</td><td>Odoo.sh and self-hosted installations that allow custom add-ons</td></tr>
-            <tr><td>Required Odoo apps</td><td>Base and Web only; optional templates appear only for apps already installed</td></tr>
-            <tr><td>Python dependency</td><td><code>xlsxwriter</code> for XLSX exports</td></tr>
-            <tr><td>Not included</td><td>External data warehouses, write-back actions, scheduled email delivery, public portals, AI forecasting or arbitrary code execution</td></tr>
+            <tr><td>Required Odoo apps</td><td>Base, Web and Mail; optional templates appear only for apps already installed</td></tr>
+            <tr><td>Python dependencies</td><td><code>xlsxwriter</code> for XLSX exports and <code>reportlab</code> for scheduled PDFs</td></tr>
+            <tr><td>Not included</td><td>External data warehouses, write-back actions, public or portal delivery, arbitrary email recipients, external report storage, AI forecasting or arbitrary code execution</td></tr>
           </tbody>
         </table>
       </div>
@@ -168,7 +170,7 @@
       <div class="shell download">
         <div class="eyebrow" style="color:#a9eee3">Client documentation</div>
         <h2>Install, configure and build your first dashboard.</h2>
-        <p>Use the online reference for installation, roles, custom queries, widgets, filters, layout editing, validation, sharing, exports and troubleshooting. A printable illustrated guide is also available.</p>
+        <p>Use the online reference for installation, roles, custom queries, widgets, filters, layout editing, validation, sharing, interactive and scheduled exports, and troubleshooting. A printable illustrated guide is also available.</p>
         <div class="actions"><a class="button" href="docs/dashboard-studio.html">Open documentation</a><a class="button" href="downloads/ModApps-Dashboard-Studio-Client-Guide.pdf">Download PDF guide</a></div>
       </div>
     </section>
