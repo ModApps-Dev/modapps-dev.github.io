@@ -61,6 +61,10 @@
     .price { font-size:2rem; font-weight:900; letter-spacing:-.03em; }
     .price small { color:var(--soft); font-size:.82rem; font-weight:650; letter-spacing:0; }
     .doc-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .doc-product + .doc-product { margin-top:34px; }
+    .doc-product-head { display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:12px 18px; margin:0 0 14px; }
+    .doc-product-head h3 { margin:0; font-size:1.35rem; }
+    .doc-product-head p { margin:4px 0 0; color:var(--soft); }
     .doc-card { display:block; padding:26px; border:1px solid var(--line); border-radius:20px; background:#fff; text-decoration:none; transition:transform .18s ease,box-shadow .18s ease; }
     .doc-card:hover { transform:translateY(-3px); box-shadow:0 16px 34px rgba(23,36,61,.09); }
     .doc-card p { margin:0; color:var(--soft); }
@@ -103,13 +107,21 @@
     <section id="documentation">
       <div class="shell">
         <div class="section-head"><div class="eyebrow">Documentation</div><h2>Installation and operating guides.</h2><p>Each released module has an online setup, workflow, security and troubleshooting reference. Dashboard Studio also includes a printable PDF guide.</p></div>
-        <div class="doc-grid">
-          <a class="doc-card" href="docs/dashboard-studio.html#installation"><h3>Installation and setup</h3><p>Requirements, installation, upgrade steps and the first access-role assignment.</p><span>Open setup guide →</span></a>
-          <a class="doc-card" href="docs/dashboard-studio.html#building"><h3>Building dashboards</h3><p>Queries, measures, widgets, filters, layouts, validation and sharing.</p><span>Open user guide →</span></a>
-          <a class="doc-card" href="docs/dashboard-studio.html#security"><h3>Security and support</h3><p>Roles, viewer permissions, company access, exports and troubleshooting.</p><span>Open reference →</span></a>
-          <a class="doc-card" href="docs/sales-order-amendments.html#installation"><h3>Amendments setup</h3><p>Install the module, assign standard Sales roles and verify the approval separation.</p><span>Open setup guide →</span></a>
-          <a class="doc-card" href="docs/sales-order-amendments.html#workflow"><h3>Request and approval</h3><p>Supported changes, request states, manager review and safe application.</p><span>Open workflow guide →</span></a>
-          <a class="doc-card" href="docs/sales-order-amendments.html#safety"><h3>Safety boundaries</h3><p>Understand the downstream conditions the module intentionally refuses.</p><span>Open safety reference →</span></a>
+        <div class="doc-product">
+          <div class="doc-product-head"><div><h3>ModApps Dashboard Studio</h3><p>Build, secure and operate permission-aware Odoo dashboards.</p></div><span class="tag">Dashboard module</span></div>
+          <div class="doc-grid">
+            <a class="doc-card" href="docs/dashboard-studio.html#installation"><h3>Dashboard Studio setup</h3><p>Requirements, installation, upgrade steps and the first access-role assignment.</p><span>Open setup guide →</span></a>
+            <a class="doc-card" href="docs/dashboard-studio.html#building"><h3>Build dashboards</h3><p>Queries, measures, widgets, filters, layouts, validation and sharing.</p><span>Open user guide →</span></a>
+            <a class="doc-card" href="docs/dashboard-studio.html#security"><h3>Dashboard security and support</h3><p>Roles, viewer permissions, company access, exports and troubleshooting.</p><span>Open reference →</span></a>
+          </div>
+        </div>
+        <div class="doc-product">
+          <div class="doc-product-head"><div><h3>Sales Order Amendments</h3><p>Request, approve and audit controlled changes to confirmed sales orders.</p></div><span class="tag">Sales module</span></div>
+          <div class="doc-grid">
+            <a class="doc-card" href="docs/sales-order-amendments.html#installation"><h3>Sales Amendments setup</h3><p>Install the module, assign requesters and approvers, and verify approval separation.</p><span>Open setup guide →</span></a>
+            <a class="doc-card" href="docs/sales-order-amendments.html#workflow"><h3>Request and approval workflow</h3><p>Supported changes, request states, approver review and safe application.</p><span>Open workflow guide →</span></a>
+            <a class="doc-card" href="docs/sales-order-amendments.html#safety"><h3>Amendment safety boundaries</h3><p>Understand the downstream conditions the module intentionally refuses.</p><span>Open safety reference →</span></a>
+          </div>
         </div>
       </div>
     </section>
