@@ -71,6 +71,8 @@
     .visual img { width:100%; }
     .grid figure { margin:0; }
     .visual figcaption { padding:12px 15px; color:var(--soft); font-size:.85rem; }
+    .video-frame { overflow:hidden; aspect-ratio:16/9; border:1px solid var(--line); border-radius:24px; background:#111; box-shadow:0 18px 46px rgba(23,36,61,.08); }
+    .video-frame iframe { display:block; width:100%; height:100%; border:0; }
     .split { display:grid; grid-template-columns:1fr 1fr; gap:42px; align-items:start; }
     .feature-list { display:grid; gap:12px; margin:0; padding:0; list-style:none; }
     .feature-list li { position:relative; padding:13px 15px 13px 44px; border:1px solid var(--line); border-radius:14px; background:#fff; font-weight:650; }
@@ -88,6 +90,7 @@
     @media (max-width:560px) { .shell { width:min(100% - 24px,1160px); } h1 { font-size:3rem; } section { padding:54px 0; } .download { padding:28px; } .footer { flex-direction:column; } }
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ModApps Dashboard Studio","applicationCategory":"BusinessApplication","operatingSystem":"Odoo 18 and Odoo 19","url":"https://www.modapps.dev/dashboard-studio.html","downloadUrl":"https://apps.odoo.com/apps/modules/19.0/modapps_insight_studio","offers":{"@type":"Offer","price":"79","priceCurrency":"USD","url":"https://apps.odoo.com/apps/modules/19.0/modapps_insight_studio"},"publisher":{"@type":"Organization","name":"ModApps","url":"https://www.modapps.dev/","logo":{"@type":"ImageObject","url":"https://www.modapps.dev/favicon.png"}}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"Odoo Dashboard Studio 18 and 19 walkthrough","description":"A short product walkthrough covering dashboard navigation, filters, KPI drill-through and layout customization.","thumbnailUrl":"https://i.ytimg.com/vi/7S-5phii29I/maxresdefault.jpg","uploadDate":"2026-10-18","duration":"PT46S","contentUrl":"https://youtu.be/7S-5phii29I","embedUrl":"https://www.youtube-nocookie.com/embed/7S-5phii29I"}</script>
 </head>
 <body>
   <header>
@@ -106,10 +109,17 @@
           <div class="eyebrow">Odoo 18 and 19 · Community and Enterprise</div>
           <h1>Dashboards your team can build and trust.</h1>
           <p class="lead">ModApps Dashboard Studio turns saved Odoo data into permission-aware operational dashboards. Designers choose validated fields and calculations; viewers see only records their existing Odoo access allows.</p>
-          <div class="actions"><a class="button button-primary" href="https://apps.odoo.com/apps/modules/19.0/modapps_insight_studio">Odoo 19</a><a class="button button-secondary" href="https://apps.odoo.com/apps/modules/18.0/modapps_insight_studio">Odoo 18</a><a class="button button-secondary" href="docs/dashboard-studio.html">Read the documentation</a></div>
+          <div class="actions"><a class="button button-primary" href="https://apps.odoo.com/apps/modules/19.0/modapps_insight_studio">Odoo 19</a><a class="button button-secondary" href="https://apps.odoo.com/apps/modules/18.0/modapps_insight_studio">Odoo 18</a><a class="button button-secondary" href="#walkthrough">Watch walkthrough</a><a class="button button-secondary" href="docs/dashboard-studio.html">Read the documentation</a></div>
           <div class="price">$79 <small>one-time OPL-1 price</small></div>
         </div>
         <figure class="cover"><img src="assets/dashboard-studio/cover.png" alt="ModApps Dashboard Studio marketplace artwork"><figcaption>Operational dashboards, guided queries and controlled sharing in one Odoo application.</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="walkthrough">
+      <div class="shell">
+        <div class="section-head"><div class="eyebrow">Product walkthrough</div><h2>See the dashboard workflow in under one minute.</h2><p>Browse dashboards, apply a shared filter, inspect permitted records and customize the layout from the working Odoo module.</p></div>
+        <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/7S-5phii29I?rel=0" title="ModApps Dashboard Studio product walkthrough" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
       </div>
     </section>
 
@@ -186,4 +196,3 @@
   <footer><div class="shell footer"><div><strong>ModApps</strong><br><small>Focused Odoo extensions with explicit safety boundaries.</small></div><div><small><a href="https://apps.odoo.com/apps/modules/19.0/modapps_insight_studio">Odoo 19</a> · <a href="https://apps.odoo.com/apps/modules/18.0/modapps_insight_studio">Odoo 18</a> · <a href="mailto:info@modapps.dev">Support</a> · <a href="index.html">Home</a></small></div></div></footer>
 </body>
 </html>
-
