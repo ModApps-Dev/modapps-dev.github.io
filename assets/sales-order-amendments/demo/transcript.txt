@@ -1,0 +1,6 @@
+ModApps Sales Order Amendments brings governed, auditable change management to confirmed Odoo 19 sales orders.
+Click Request Amendment to adjust quantities, unit prices, or commitment dates. The system instantly highlights added, modified, and removed lines with unmistakable badges and delta calculations.
+Submit the amendment for approval. Separation-of-duty rules ensure requesters cannot approve their own commercial changes.
+Logged in as an authorized sales manager, review the commercial and logistics impact summary. Approve and apply the revision in a single atomic database transaction.
+The original order is safely updated, existing unpicked delivery moves are cleanly replaced, and a tamper-evident audit timeline is preserved.
+Generate a professional one-page Decision Certificate for compliance and customer sign-off. Safe, transparent, and built for Odoo.

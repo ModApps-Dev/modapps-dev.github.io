@@ -1,0 +1,6 @@
+Insight Studio delivers enterprise KPI and BI dashboards in native Odoo 19, without code, external services, or security compromises.
+Opening the Sales Executive dashboard reveals an eight-card high-density layout. Every KPI shows live metrics, period comparisons, and target tracking.
+Use compact single-row filters to slice data by date or salesperson, instantly updating trend charts, pipeline funnels, and customer breakdowns.
+Click any metric to drill through directly into permitted underlying records, respecting native Odoo access controls and multi-company boundaries.
+In customize mode, drag and resize cards on a responsive twelve-column grid, configure measures, and export presentation-ready reports.
+Dashboard Studio: governed, fast, and fully native to your Odoo workspace.

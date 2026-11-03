@@ -1,0 +1,40 @@
+1
+00:00:00,050 --> 00:00:08,425
+ModApps Sales Order Amendments brings governed, auditable change management to confirmed Odoo 19 sales orders.
+
+2
+00:00:08,425 --> 00:00:13,725
+Click Request Amendment to adjust quantities, unit prices, or commitment dates.
+
+3
+00:00:13,725 --> 00:00:21,900
+The system instantly highlights added, modified, and removed lines with unmistakable badges and delta calculations.
+
+4
+00:00:21,900 --> 00:00:24,275
+Submit the amendment for approval.
+
+5
+00:00:24,275 --> 00:00:30,425
+Separation-of-duty rules ensure requesters cannot approve their own commercial changes.
+
+6
+00:00:30,425 --> 00:00:36,325
+Logged in as an authorized sales manager, review the commercial and logistics impact summary.
+
+7
+00:00:36,325 --> 00:00:41,037
+Approve and apply the revision in a single atomic database transaction.
+
+8
+00:00:41,037 --> 00:00:50,650
+The original order is safely updated, existing unpicked delivery moves are cleanly replaced, and a tamper-evident audit timeline is preserved.
+
+9
+00:00:50,650 --> 00:00:56,975
+Generate a professional one-page Decision Certificate for compliance and customer sign-off.
+
+10
+00:00:56,975 --> 00:00:59,950
+Safe, transparent, and built for Odoo.
+
