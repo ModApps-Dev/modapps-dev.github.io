@@ -38,7 +38,7 @@
     }
 
     if (href.includes("apps.odoo.com/apps/modules/")) {
-      var versionMatch = href.match(/modules\/(18\.0|19\.0)\//);
+      var versionMatch = href.match(/modules\/(16\.0|17\.0|18\.0|19\.0|20\.0)\//);
       sendEvent("odoo_app_click", {
         product: href.includes("modapps_insight_studio")
           ? "dashboard_studio"
